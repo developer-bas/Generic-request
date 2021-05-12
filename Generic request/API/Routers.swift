@@ -42,6 +42,8 @@ enum  Router: URLRequestConvertible {
     
         func asURLRequest() throws -> URLRequest {
             var urlRequest = try URLRequest(url: APIManager.shared.baseURLString + path, method: method)
+            
+            
             urlRequest.headers = headers
             
             switch self {

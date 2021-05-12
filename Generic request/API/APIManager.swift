@@ -43,6 +43,24 @@ class APIManager {
             
             }
     }
+    
+    func sendData<T>(data: Data, url: URLRequestConvertible, completion: @escaping (Result<T, Error>) -> Void)where T: Codable {
+        session.upload(data, with: url, interceptor: genericRequestInterceptor())
+            .responseDecodable(of: T.self) { response in
+                debugPrint(response)
+            }
+    }
+    
+    func sendMultipart<T: Codable>(completion: @escaping (Result<T, Error>) -> Void){
+        AF.upload(multipartFormData: { multipartFormData in
+            multipartFormData.append(Data("one".utf8), withName: "one")
+            multipartFormData.append(Data("two".utf8), withName: "two")
+        }, to: "https://httpbin.org/post")
+            .responseDecodable(of: T.self) { response in
+                debugPrint(response)
+            }
+
+    }
         
     
 }
