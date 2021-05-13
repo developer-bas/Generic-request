@@ -36,11 +36,18 @@ class APIManager {
                         }
                     }
                     
-                case .failure(let error):
-                    completion(.failure(error))
+//                case .failure(let error):
+//                    completion(.failure(error))
+                
+                default:
+                    break
                 }
                 
             
+            }
+            .response(responseSerializer: ErrorResponseSerializer()) { [weak self] response in
+                guard let self = self else { return }
+                print(response.value)
             }
     }
     
@@ -50,6 +57,9 @@ class APIManager {
                 debugPrint(response)
             }
     }
+    
+    
+    // Pendiente 
     
     func sendMultipart<T: Codable>(completion: @escaping (Result<T, Error>) -> Void){
         AF.upload(multipartFormData: { multipartFormData in

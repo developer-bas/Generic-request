@@ -12,6 +12,9 @@
 		1508D6B52649082F00CFAFC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1508D6B42649082F00CFAFC6 /* Preview Assets.xcassets */; };
 		1508D6BE264908A400CFAFC6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1508D6BD264908A400CFAFC6 /* Alamofire */; };
 		1508D6C0264909DF00CFAFC6 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1508D6BF264909DF00CFAFC6 /* APIManager.swift */; };
+		15BA91C1264CD879003A9A8E /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BA91C0264CD879003A9A8E /* ResponseError.swift */; };
+		15BA91C3264CDD1F003A9A8E /* GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BA91C2264CDD1F003A9A8E /* GenericError.swift */; };
+		15BA91C5264CE240003A9A8E /* ErrorResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BA91C4264CE240003A9A8E /* ErrorResponseSerializer.swift */; };
 		15E3894D264A20C20083CC77 /* Authetication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E3894C264A20C20083CC77 /* Authetication.swift */; };
 		15E38954264A3D3D0083CC77 /* FilmsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E38953264A3D3D0083CC77 /* FilmsViewModel.swift */; };
 		15E38956264A3F170083CC77 /* FilmsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E38955264A3F170083CC77 /* FilmsView.swift */; };
@@ -26,6 +29,9 @@
 		1508D6B42649082F00CFAFC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1508D6B62649082F00CFAFC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1508D6BF264909DF00CFAFC6 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		15BA91C0264CD879003A9A8E /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
+		15BA91C2264CDD1F003A9A8E /* GenericError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericError.swift; sourceTree = "<group>"; };
+		15BA91C4264CE240003A9A8E /* ErrorResponseSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponseSerializer.swift; sourceTree = "<group>"; };
 		15E3894C264A20C20083CC77 /* Authetication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authetication.swift; sourceTree = "<group>"; };
 		15E38953264A3D3D0083CC77 /* FilmsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsViewModel.swift; sourceTree = "<group>"; };
 		15E38955264A3F170083CC77 /* FilmsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsView.swift; sourceTree = "<group>"; };
@@ -83,9 +89,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		15BA91BF264CD84C003A9A8E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				15BA91C0264CD879003A9A8E /* ResponseError.swift */,
+				15BA91C2264CDD1F003A9A8E /* GenericError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		15E38951264A31300083CC77 /* ErrorSerializer */ = {
 			isa = PBXGroup;
 			children = (
+				15BA91BF264CD84C003A9A8E /* Model */,
+				15BA91C4264CE240003A9A8E /* ErrorResponseSerializer.swift */,
 			);
 			path = ErrorSerializer;
 			sourceTree = "<group>";
@@ -191,7 +208,10 @@
 				15E3894D264A20C20083CC77 /* Authetication.swift in Sources */,
 				15E3895F264A42820083CC77 /* Routers.swift in Sources */,
 				1508D6AE2649082E00CFAFC6 /* Generic_requestApp.swift in Sources */,
+				15BA91C3264CDD1F003A9A8E /* GenericError.swift in Sources */,
 				15E38959264A419A0083CC77 /* Film.swift in Sources */,
+				15BA91C1264CD879003A9A8E /* ResponseError.swift in Sources */,
+				15BA91C5264CE240003A9A8E /* ErrorResponseSerializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
